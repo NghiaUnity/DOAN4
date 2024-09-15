@@ -2,12 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+public enum QAType{
+    Yen,
+    Nghia
+}
 public class TriggerControler : MonoBehaviour
 {
     public int questionId;
+    public QAType qAtype;
     
     public void Trigger(){
-        TriggerSystem.instance.OnQuestionTriggered(questionId);
+        TriggerSystem.instance.OnQuestionTriggered(questionId, qAtype);
     }
 
     /// <summary>

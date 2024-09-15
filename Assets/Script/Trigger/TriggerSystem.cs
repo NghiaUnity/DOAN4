@@ -19,9 +19,9 @@ public class TriggerSystem : MonoBehaviour
         }
     }
 
-    public void OnQuestionTriggered(int questionId){
+    public void OnQuestionTriggered(int questionId, QAType qAType){
         Debug.Log("Question triggered: " + questionId);
         // Xu li cau hoi o day
-
+        
     }
 }
