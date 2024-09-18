@@ -6,6 +6,12 @@ public class DiChuyen : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float rotationSpeed = 5f; // Tốc độ xoay
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -37,5 +43,8 @@ public class DiChuyen : MonoBehaviour
         Vector3 move = new Vector3(moveX, 0f, moveY).normalized;
         transform.position += move * moveSpeed * Time.deltaTime;
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+        // Set the speed parameter in the Animator
+        animator.SetFloat("speed", move.magnitude * moveSpeed);
     }
 }
