@@ -22,27 +22,28 @@ public class DiChuyen : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             moveX = -1f;
-            targetRotation = Quaternion.Euler(0, -90, 0); 
         }
         if (Input.GetKey(KeyCode.D))
         {
             moveX = 1f;
-            targetRotation = Quaternion.Euler(0, 90, 0); 
         }
         if (Input.GetKey(KeyCode.W))
         {
             moveY = 1f;
-            targetRotation = Quaternion.Euler(0, 0, 0); 
         }
         if (Input.GetKey(KeyCode.S))
         {
             moveY = -1f;
-            targetRotation = Quaternion.Euler(0, 180, 0); 
         }
 
         Vector3 move = new Vector3(moveX, 0f, moveY).normalized;
+        if (move != Vector3.zero)
+        {
+            targetRotation = Quaternion.LookRotation(move);
+        }
+
         transform.position += move * moveSpeed * Time.deltaTime;
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
         // Set the speed parameter in the Animator
         animator.SetFloat("speed", move.magnitude * moveSpeed);
