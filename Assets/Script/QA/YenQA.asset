@@ -12,4 +12,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8de8b4689d4af409ed6f99ffe77fa9, type: 3}
   m_Name: YenQA
   m_EditorClassIdentifier: 
-  QandAs: []
+  QandAs:
+  - id: 5
+    question: "C\xF3 bao nhi\xEAu phi\u1EBFn \u0111\xE1 tr\xEAn t\u01B0\u1EDDng?"
+    ans:
+    - id: A
+      ans: "12 phi\u1EBFn"
+      isCorrectAns: 0
+    - id: B
+      ans: "4 phi\u1EBFn"
+      isCorrectAns: 0
+    - id: C
+      ans: "14 phi\u1EBFn"
+      isCorrectAns: 1
+    - id: D
+      ans: "11 phi\u1EBFn"
+      isCorrectAns: 0
+    des: "C\xF3 14 phi\u1EBFn \u0111\xE1 t\u1EA5t c\u1EA3 tr\xEAn t\u01B0\u1EDDng "
+  - id: 6
+    question: "M\u1ED9t con \u1ED1c s\xEAn ph\u1EA3i leo l\xEAn \u0111\u1EC9nh c\u1EE7a
+      c\xE1i c\u1ED9t cao 10m. M\u1ED7i ng\xE0y n\xF3 leo \u0111\u01B0\u1EE3c 4m
+      v\xE0 m\u1ED7i \u0111\xEAm n\xF3 b\u1ECB tu\u1ED9t xu\u1ED1ng 3m. V\u1EADy
+      khi n\xE0o con \u1ED1c s\xEAn kia leo l\xEAn \u0111\u1EBFn \u0111\u1EC9nh n\u1EBFu
+      n\xF3 b\u1EAFt \u0111\u1EA7u v\xE0o s\xE1ng th\u1EE9 hai??"
+    ans:
+    - id: A
+      ans: "Ch\u1EE7 nh\u1EADt "
+      isCorrectAns: 1
+    - id: B
+      ans: "Th\u1EE9 b\u1EA3y"
+      isCorrectAns: 0
+    - id: C
+      ans: "Th\u1EE9 T\u01B0"
+      isCorrectAns: 0
+    - id: D
+      ans: "Th\u1EE9 s\xE1u"
+      isCorrectAns: 0
+    des: "6 ng\xE0y \u0111\u1EA7u \u1ED1c s\xEAn s\u1EBD leo \u0111\u01B0\u1EE3c
+      6m, v\u1EADy th\xEC \u0111\u1EBFn chi\u1EC1u ng\xE0y ch\u1EE7 nh\u1EADt \u1ED1c
+      s\xEAn s\u1EBD leo \u0111\u01B0\u1EE3c \u0111\u1EBFn \u0111\u1EC9nh"
+  - id: 7
+    question: "C\xF3 bao nhi\xEAu chi\u1EBFc gh\u1EBF trong c\u0103n ph\xF2ng?"
+    ans:
+    - id: A
+      ans: "5 chi\u1EBFc "
+      isCorrectAns: 0
+    - id: B
+      ans: "7 chi\u1EBFc "
+      isCorrectAns: 0
+    - id: C
+      ans: "2 chi\u1EBFc "
+      isCorrectAns: 0
+    - id: D
+      ans: "4 chi\u1EBFc "
+      isCorrectAns: 1
+    des: "C\xF3 4 chi\u1EBFc gh\u1EBF trong to\xE0n b\u1ED9 c\u1EA3 c\u0103n ph\xF2ng"
+  - id: 8
+    question: "C\xF3 m\u1ED9t ng\u01B0\u1EDDi \u0111\xE0n \xF4ng \u0111i c\xE2u c\xE1.
+      Sau bu\u1ED5i c\xE2u, anh ta c\xE2u \u0111\u01B0\u1EE3c 6 con kh\xF4ng \u0111\u1EA7u,
+      8 con c\xF3 m\u1ED9t n\u1EEDa v\xE0 9 con kh\xF4ng c\xF3 \u0111u\xF4i. H\u1ECFi
+      anh ta t\u1ED5ng c\u1ED9ng c\xE2u \u0111\u01B0\u1EE3c bao nhi\xEAu con?r\xEAn
+      t\u01B0\u1EDDng?"
+    ans:
+    - id: A
+      ans: '11 con '
+      isCorrectAns: 0
+    - id: B
+      ans: 8 con
+      isCorrectAns: 0
+    - id: C
+      ans: '0 con '
+      isCorrectAns: 1
+    - id: D
+      ans: '23 con '
+      isCorrectAns: 0
+    des: "Ng\u01B0\u1EDDi \u0111i c\xE2u kh\xF4ng c\xE2u \u0111\u01B0\u1EE3c b\u1EA5t
+      k\u1EF3 con c\xE1 n\xE0o c\u1EA3. B\u1EDFi v\xEC: S\u1ED1 6 ch\xFAng ta b\u1ECF
+      \u0111\u1EA7u \u0111i s\u1EBD th\xE0nh s\u1ED1 0 S\u1ED1 8 b\u1ECF m\u1ED9t
+      n\u1EEDa \u0111i ch\xFAng ta l\u1EA1i \u0111\u01B0\u1EE3c s\u1ED1 0 S\u1ED1
+      9 b\u1ECF \u0111u\xF4i \u0111i ch\xFAng ta c\u0169ng \u0111\u01B0\u1EE3c s\u1ED1
+      0"
