@@ -23,7 +23,10 @@ public class TriggerControler : MonoBehaviour
     /// <param name="other">The other Collider involved in this collision.</param>
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Player")) {
+            Debug.Log("Trigger entered by: " + other.name);
         Trigger();
+        }
     }
 
 }
