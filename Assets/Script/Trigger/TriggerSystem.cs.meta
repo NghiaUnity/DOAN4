@@ -3,7 +3,9 @@ guid: c520fa736b4454346b880c0ed323e3f2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - nghiaConfig: {instanceID: 0}
+  - yenConfig: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
