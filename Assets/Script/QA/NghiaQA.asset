@@ -12,4 +12,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8de8b4689d4af409ed6f99ffe77fa9, type: 3}
   m_Name: NghiaQA
   m_EditorClassIdentifier: 
-  QandAs: []
+  QandAs:
+  - id: 1
+    question: "M\u1ED9t con ng\u1EF1a \u0111i 4 b\u01B0\u1EDBc v\u1EC1 ph\xEDa \u0110\xF4ng,
+      3 b\u01B0\u1EDBc v\u1EC1 ph\xEDa T\xE2y, r\u1ED3i l\u1EA1i 5 b\u01B0\u1EDBc
+      v\u1EC1 ph\xEDa \u0110\xF4ng. V\u1EADy cu\u1ED1i c\xF9ng n\xF3 c\xE1ch \u0111i\u1EC3m
+      ban \u0111\u1EA7u bao xa?"
+    ans:
+    - id: A
+      ans: "2 b\u01B0\u1EDBc v\u1EC1 ph\xEDa \u0110\xF4ng"
+      isCorrectAns: 0
+    - id: B
+      ans: "6 b\u01B0\u1EDBc v\u1EC1 ph\xEDa \u0110\xF4ng"
+      isCorrectAns: 1
+    - id: C
+      ans: "3 b\u01B0\u1EDBc v\u1EC1 ph\xEDa T\xE2y"
+      isCorrectAns: 0
+    - id: D
+      ans: "5 b\u01B0\u1EDBc v\u1EC1 ph\xEDa \u0110\xF4ng"
+      isCorrectAns: 0
+    des: "Con ng\u1EF1a \u0111i 4 b\u01B0\u1EDBc v\u1EC1 ph\xEDa \u0110\xF4ng, r\u1ED3i
+      l\xF9i l\u1EA1i 3 b\u01B0\u1EDBc v\u1EC1 ph\xEDa T\xE2y, t\u1EE9c l\xE0 n\xF3
+      ch\u1EC9 c\xF2n 1 b\u01B0\u1EDBc v\u1EC1 ph\xEDa \u0110\xF4ng. Sau \u0111\xF3,
+      n\xF3 l\u1EA1i ti\u1EBFn th\xEAm 5 b\u01B0\u1EDBc v\u1EC1 ph\xEDa \u0110\xF4ng,
+      t\u1ED5ng c\u1ED9ng l\xE0 6 b\u01B0\u1EDBc v\u1EC1 ph\xEDa \u0110\xF4ng. Tuy
+      nhi\xEAn, c\xE1ch \u0111i\u1EC3m ban \u0111\u1EA7u l\xE0 2 b\u01B0\u1EDBc."
+  - id: 2
+    question: "M\u1ED9t ng\u01B0\u1EDDi c\xF3 3 \u0111\u1ED3ng xu: m\u1ED9t \u0111\u1ED3ng
+      xu c\xF3 gi\xE1 tr\u1ECB 1 \u0111\u1ED3ng, m\u1ED9t \u0111\u1ED3ng xu c\xF3
+      gi\xE1 tr\u1ECB 2 \u0111\u1ED3ng, v\xE0 m\u1ED9t \u0111\u1ED3ng xu c\xF3 gi\xE1
+      tr\u1ECB 5 \u0111\u1ED3ng. N\u1EBFu anh ta r\u01A1i m\u1EA5t m\u1ED9t \u0111\u1ED3ng
+      xu, gi\xE1 tr\u1ECB t\u1ED5ng c\u1ED9ng c\u1EE7a hai \u0111\u1ED3ng xu c\xF2n
+      l\u1EA1i l\xE0 bao nhi\xEAu?"
+    ans:
+    - id: A
+      ans: "3 \u0111\u1ED3ng"
+      isCorrectAns: 0
+    - id: B
+      ans: "6 \u0111\u1ED3ng"
+      isCorrectAns: 1
+    - id: C
+      ans: "7 \u0111\u1ED3ng"
+      isCorrectAns: 0
+    - id: D
+      ans: "8 \u0111\u1ED3ng "
+      isCorrectAns: 0
+    des: "N\u1EBFu ng\u01B0\u1EDDi n\xE0y r\u01A1i m\u1EA5t \u0111\u1ED3ng xu c\xF3
+      gi\xE1 tr\u1ECB 2 \u0111\u1ED3ng, t\u1ED5ng gi\xE1 tr\u1ECB c\u1EE7a hai \u0111\u1ED3ng
+      xu c\xF2n l\u1EA1i s\u1EBD l\xE0 1 \u0111\u1ED3ng v\xE0 5 \u0111\u1ED3ng, t\u1EE9c
+      l\xE0 6 \u0111\u1ED3ng."
+  - id: 3
+    question: "N\u1EBFu h\xF4m nay l\xE0 th\u1EE9 N\u0103m, ng\xE0y h\xF4m sau c\u1EE7a
+      ng\xE0y m\u1ED1t l\xE0 th\u1EE9 m\u1EA5y?"
+    ans:
+    - id: A
+      ans: "Th\u1EE9 S\xE1u"
+      isCorrectAns: 0
+    - id: B
+      ans: "Th\u1EE9 B\u1EA3y"
+      isCorrectAns: 0
+    - id: C
+      ans: "Ch\u1EE7 Nh\u1EADt"
+      isCorrectAns: 0
+    - id: D
+      ans: "Th\u1EE9 Hai"
+      isCorrectAns: 1
+    des: "N\u1EBFu h\xF4m nay l\xE0 th\u1EE9 N\u0103m, ng\xE0y m\u1ED1t l\xE0 th\u1EE9
+      B\u1EA3y, v\xE0 ng\xE0y sau ng\xE0y m\u1ED1t s\u1EBD l\xE0 Ch\u1EE7 Nh\u1EADt.
+      V\u1EADy c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng l\xE0 ng\xE0y h\xF4m sau c\u1EE7a
+      ng\xE0y m\u1ED1t l\xE0 th\u1EE9 Hai."
+  - id: 4
+    question: "M\u1ED9t con r\u1EAFn \u0111i t\u1EEB \u0111i\u1EC3m A \u0111\u1EBFn
+      \u0111i\u1EC3m B v\u1EDBi t\u1ED1c \u0111\u1ED9 3 m\xE9t m\u1ED7i ph\xFAt.
+      \u0110i\u1EC3m B c\xE1ch \u0111i\u1EC3m A 9 m\xE9t. H\u1ECFi con r\u1EAFn s\u1EBD
+      m\u1EA5t bao nhi\xEAu ph\xFAt \u0111\u1EC3 \u0111\u1EBFn \u0111i\u1EC3m B?"
+    ans:
+    - id: A
+      ans: "2 ph\xFAt"
+      isCorrectAns: 0
+    - id: B
+      ans: "3 ph\xFAt"
+      isCorrectAns: 1
+    - id: C
+      ans: "5 ph\xFAt"
+      isCorrectAns: 0
+    - id: D
+      ans: "7 ph\xFAt"
+      isCorrectAns: 0
+    des: "Con r\u1EAFn di chuy\u1EC3n v\u1EDBi t\u1ED1c \u0111\u1ED9 3 m\xE9t m\u1ED7i
+      ph\xFAt v\xE0 kho\u1EA3ng c\xE1ch t\u1EEB \u0111i\u1EC3m A \u0111\u1EBFn \u0111i\u1EC3m
+      B l\xE0 9 m\xE9t. \u0110\u1EC3 \u0111i h\u1EBFt 9 m\xE9t, con r\u1EAFn c\u1EA7n
+      9/3 = 3 ph\xFAt."
