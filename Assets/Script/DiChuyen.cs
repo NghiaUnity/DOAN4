@@ -36,6 +36,14 @@ public class DiChuyen : MonoBehaviour
             moveY = -1f;
         }
 
+
+
+
+
+
+
+        
+
         Vector3 move = new Vector3(moveX, 0f, moveY).normalized;
         if (move != Vector3.zero)
         {
