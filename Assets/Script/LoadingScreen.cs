@@ -1,27 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using System.Collections;
+using System.Collections; // Cần thiết cho Coroutine
 
-public class LoadingScreen : MonoBehaviour
+public class LoadingSceneController : MonoBehaviour
 {
-    public Slider loadingBar;
-
-    void Start()
+    private void Start()
     {
-        StartCoroutine(LoadAsynchronously("MainScene"));
+        // Gọi Coroutine để load scene
+        StartCoroutine(LoadLoginSceneAfterDelay());
     }
 
-    IEnumerator LoadAsynchronously(string sceneName)
+    private IEnumerator LoadLoginSceneAfterDelay()
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        // Chờ 5 giây
+        yield return new WaitForSeconds(5f);
 
-        while (!operation.isDone)
-        {
-            // Cập nhật giá trị của thanh tiến trình (progress bar)
-            float progress = Mathf.Clamp01(operation.progress / 0.9f);
-            loadingBar.value = progress;
-            yield return null;
-        }
+        // Chuyển đến cảnh login
+        SceneManager.LoadScene("Login"); 
     }
 }
