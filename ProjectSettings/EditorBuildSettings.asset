@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CaiDat.unity
     guid: 79647f69913120942a0a377e69211967
   - enabled: 1
+    path: Assets/Scenes/Market.unity
+    guid: 17e9c56566ece0b4ebb168523f99dcc8
+  - enabled: 1
     path: Assets/Scenes/ChoseMap.unity
     guid: 869c6080e6d7ec5408f6b46125ed95ae
   - enabled: 1
