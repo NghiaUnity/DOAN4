@@ -24,8 +24,6 @@ public class QuizGame : MonoBehaviour
         youWinImage.gameObject.SetActive(false);
         UpdateCorrectAnswersText();
 
-
-        
     }
 
     void Update()
