@@ -12,8 +12,12 @@ public class ShowGuideButton : MonoBehaviour
     public Button buttonB; 
     public Button buttonC;
     public Button buttonD;
-    public Text resultText; 
+    
+    public Image correctImage; 
+    public Image incorrectImage; 
     public float displayDistance = 5f;
+
+    public QuizGame quizGame;
 
     private bool isGuideButtonActive = false;
     private bool isUIPanelOpen = false;
@@ -23,9 +27,11 @@ public class ShowGuideButton : MonoBehaviour
     {
         guideButton.SetActive(false);
         uiPanel.SetActive(false);
+        correctImage.gameObject.SetActive(false); 
+        incorrectImage.gameObject.SetActive(false); 
         closeButton.onClick.AddListener(CloseUIPanel); 
-        buttonA.onClick.AddListener(ShowCorrect);  // Chính xác
-        buttonB.onClick.AddListener(ShowIncorrect); // Sai
+        buttonA.onClick.AddListener(ShowCorrect);
+        buttonB.onClick.AddListener(ShowIncorrect);
         buttonD.onClick.AddListener(ShowIncorrect);
         buttonC.onClick.AddListener(ShowIncorrect);
     }
@@ -57,28 +63,33 @@ public class ShowGuideButton : MonoBehaviour
 
     void OpenItemBox()
     {
-        Debug.Log("Mở câu hỏi ????");
+        
         uiPanel.SetActive(true);
         isUIPanelOpen = true;
     }
 
     void CloseUIPanel()
     {
-        Debug.Log("Đóng câu hỏi !!!");
+        
         uiPanel.SetActive(false);
         isUIPanelOpen = false; 
+        correctImage.gameObject.SetActive(false);
+        incorrectImage.gameObject.SetActive(false); 
     }
 
     void ShowCorrect()
     {
-        resultText.text = "KHÔN GẦN = ĐẠT";
+        
+        correctImage.gameObject.SetActive(true); 
+
         questionAnswered = true;
         Invoke("CloseUIPanel", 2f);
     }
 
     void ShowIncorrect()
     {
-        resultText.text = "NGU NHƯ THẰNG NGHĨA"; 
+        
+        incorrectImage.gameObject.SetActive(true); 
         questionAnswered = true; 
         Invoke("CloseUIPanel", 2f); 
     }
