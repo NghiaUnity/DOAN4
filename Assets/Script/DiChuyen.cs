@@ -7,17 +7,18 @@ public class DiChuyen : MonoBehaviour
     public float moveSpeed = 5f;
     public float rotationSpeed = 5f; // Tốc độ xoay
     private Animator animator;
+    private Camera mainCamera;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        mainCamera = Camera.main;
     }
 
     void Update()
     {
         float moveX = 0f;
         float moveY = 0f;
-        Quaternion targetRotation = transform.rotation;
 
         if (Input.GetKey(KeyCode.A))
         {
@@ -36,24 +37,24 @@ public class DiChuyen : MonoBehaviour
             moveY = -1f;
         }
 
-
-
-
-
-
-
-        
-
         Vector3 move = new Vector3(moveX, 0f, moveY).normalized;
+        Vector3 cameraForward = mainCamera.transform.forward;
+        cameraForward.y = 0; 
+        cameraForward.Normalize();
+
+        Vector3 direction = cameraForward * moveY + mainCamera.transform.right * moveX;
+        direction.y = 0;
+        direction.Normalize();
+
         if (move != Vector3.zero)
         {
-            targetRotation = Quaternion.LookRotation(move);
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
 
-        transform.position += move * moveSpeed * Time.deltaTime;
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-        // Set the speed parameter in the Animator
+        transform.position += direction * moveSpeed * Time.deltaTime * move.magnitude;
+        
+        
         animator.SetFloat("speed", move.magnitude * moveSpeed);
     }
 }

@@ -4,22 +4,22 @@ using UnityEngine.SceneManagement;
 
 public class Quit : MonoBehaviour
 {
-    public GameObject pauseMenuPanel; // Panel chứa các button "Save game", "Quit", "Close"
-    public GameObject confirmationPanel; // Panel xác nhận
-    public Button pauseButton; // Button "Pause"
-    public Button saveButton; // Button "Save game"
-    public Button quitButton; // Button "Quit"
-    public Button closeButton; // Button "Close"
-    public Button yesButton; // Button "Có"
-    public Button noButton; // Button "Không"
+    public GameObject pauseMenuPanel; 
+    public GameObject confirmationPanel; 
+    public Button pauseButton; 
+    public Button saveButton; 
+    public Button quitButton;
+    public Button closeButton; 
+    public Button yesButton; 
+    public Button noButton; 
 
     void Start()
     {
-        // Ẩn các panel khi bắt đầu
+        
         pauseMenuPanel.SetActive(false);
         confirmationPanel.SetActive(false);
 
-        // Gán sự kiện cho các button
+        
         pauseButton.onClick.AddListener(ShowPauseMenu);
         saveButton.onClick.AddListener(SaveGame);
         quitButton.onClick.AddListener(ShowConfirmationPanel);
@@ -35,7 +35,7 @@ public class Quit : MonoBehaviour
 
     void SaveGame()
     {
-        // Thêm logic lưu game tại đây
+        
         Debug.Log("Game đã được lưu!");
     }
 

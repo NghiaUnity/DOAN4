@@ -7,33 +7,34 @@ public class ShowGuideButton : MonoBehaviour
     public Transform itemBox;
     public GameObject guideButton;
     public GameObject uiPanel;
-    public Button closeButton; 
-    public Button buttonA; 
-    public Button buttonB; 
+    public Button closeButton;
+
+    public Button buttonA;
+    public Button buttonB;
     public Button buttonC;
     public Button buttonD;
-    
-    public Image correctImage; 
-    public Image incorrectImage; 
-    public float displayDistance = 5f;
 
+    public Image correctImage;
+    public Image incorrectImage;
+    public float displayDistance = 5f;
     public QuizGame quizGame;
 
     private bool isGuideButtonActive = false;
     private bool isUIPanelOpen = false;
-    private bool questionAnswered = false; 
+    private bool questionAnswered = false;
 
     void Start()
     {
         guideButton.SetActive(false);
         uiPanel.SetActive(false);
-        correctImage.gameObject.SetActive(false); 
-        incorrectImage.gameObject.SetActive(false); 
-        closeButton.onClick.AddListener(CloseUIPanel); 
-        buttonA.onClick.AddListener(ShowCorrect);
-        buttonB.onClick.AddListener(ShowIncorrect);
-        buttonD.onClick.AddListener(ShowIncorrect);
-        buttonC.onClick.AddListener(ShowIncorrect);
+        correctImage.gameObject.SetActive(false);
+        incorrectImage.gameObject.SetActive(false);
+
+        closeButton.onClick.AddListener(CloseUIPanel);
+        buttonA.onClick.AddListener(() => ShowCorrect(true));
+        buttonB.onClick.AddListener(() => ShowCorrect(false));
+        buttonD.onClick.AddListener(() => ShowCorrect(false));
+        buttonC.onClick.AddListener(() => ShowCorrect(false));
     }
 
     void Update()
@@ -63,34 +64,32 @@ public class ShowGuideButton : MonoBehaviour
 
     void OpenItemBox()
     {
-        
         uiPanel.SetActive(true);
         isUIPanelOpen = true;
     }
 
     void CloseUIPanel()
     {
-        
         uiPanel.SetActive(false);
-        isUIPanelOpen = false; 
+        isUIPanelOpen = false;
         correctImage.gameObject.SetActive(false);
-        incorrectImage.gameObject.SetActive(false); 
+        incorrectImage.gameObject.SetActive(false);
     }
 
-    void ShowCorrect()
+    void ShowCorrect(bool isCorrect)
     {
-        
-        correctImage.gameObject.SetActive(true); 
+        if (isCorrect)
+        {
+            correctImage.gameObject.SetActive(true);
+            quizGame.AnswerQuestion(true);
+        }
+        else
+        {
+            incorrectImage.gameObject.SetActive(true);
+            quizGame.AnswerQuestion(false);
+        }
 
         questionAnswered = true;
         Invoke("CloseUIPanel", 2f);
-    }
-
-    void ShowIncorrect()
-    {
-        
-        incorrectImage.gameObject.SetActive(true); 
-        questionAnswered = true; 
-        Invoke("CloseUIPanel", 2f); 
     }
 }

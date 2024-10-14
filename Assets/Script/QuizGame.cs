@@ -11,8 +11,6 @@ public class QuizGame : MonoBehaviour
     public int correctAnswersRequired = 6;
     public float timeLimit = 600f;
 
-    
-
     private int correctAnswers = 0;
     private float timeRemaining;
     private bool gameEnded = false;
@@ -23,7 +21,6 @@ public class QuizGame : MonoBehaviour
         gameOverImage.gameObject.SetActive(false);
         youWinImage.gameObject.SetActive(false);
         UpdateCorrectAnswersText();
-
     }
 
     void Update()
@@ -47,7 +44,8 @@ public class QuizGame : MonoBehaviour
         if (isCorrect)
         {
             correctAnswers++;
-            UpdateCorrectAnswersText(); 
+            UpdateCorrectAnswersText();
+
             if (correctAnswers == totalQuestions)
             {
                 ShowYouWin();
@@ -73,10 +71,17 @@ public class QuizGame : MonoBehaviour
     void ShowYouWin()
     {
         youWinImage.gameObject.SetActive(true);
+        Invoke("HideYouWin", 2f);
+    }
+
+    void HideYouWin()
+    {
+        youWinImage.gameObject.SetActive(false);
+        gameEnded = true;
     }
 
     void UpdateCorrectAnswersText()
     {
-        correctAnswersText.text = correctAnswers + "/" + totalQuestions; 
+        correctAnswersText.text = correctAnswers + "/" + totalQuestions;
     }
 }
