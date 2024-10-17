@@ -4799,6 +4799,11 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4380135862162596471, guid: c90a364d6c4c56c468d21c1ba6c68d07,
+        type: 3}
+      propertyPath: timeLimit
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 4878467175491426154, guid: c90a364d6c4c56c468d21c1ba6c68d07,
         type: 3}
       propertyPath: m_LocalRotation.w
